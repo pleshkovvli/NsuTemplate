@@ -7,10 +7,9 @@ import androidx.lifecycle.ViewModel;
 import java.util.List;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.observers.DisposableMaybeObserver;
 import io.reactivex.observers.DisposableSingleObserver;
 import io.reactivex.schedulers.Schedulers;
-import ru.nsu.template.TemplateApplication;
+import ru.nsu.template.PicsumPictures;
 import ru.nsu.template.data.model.Repo;
 import ru.nsu.template.data.model.User;
 import ru.nsu.template.data.network.GithubApi;
@@ -34,7 +33,7 @@ public class ReposViewModel extends ViewModel {
         this.user = user;
 
         // todo make api singleton
-        api = GithubApiClient.getClient(TemplateApplication.getInstance()).create(GithubApi.class);
+        api = GithubApiClient.getClient(PicsumPictures.getInstance()).create(GithubApi.class);
 
         init();
     }

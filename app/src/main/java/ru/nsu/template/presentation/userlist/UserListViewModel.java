@@ -1,7 +1,5 @@
 package ru.nsu.template.presentation.userlist;
 
-import android.app.Application;
-
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -9,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 import java.util.List;
 
 import ru.nsu.template.R;
-import ru.nsu.template.TemplateApplication;
+import ru.nsu.template.PicsumPictures;
 import ru.nsu.template.data.model.User;
 import ru.nsu.template.data.model.UserList;
 
@@ -28,6 +26,6 @@ public class UserListViewModel extends ViewModel {
         this.userList = userList;
 
         userListLiveData.setValue(userList.getItems());
-        headerLiveData.setValue(TemplateApplication.getInstance().getString(R.string.user_list_header, query, userList.getItems().size()));
+        headerLiveData.setValue(PicsumPictures.getInstance().getString(R.string.user_list_header, query, userList.getItems().size()));
     }
 }

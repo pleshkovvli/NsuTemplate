@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">Template</string>
+    <string name="app_name">Picsum Pictures</string>
+
+    <string name="start_hint_picsum">Picture preview size</string>
+    <string name="show_pictures">Load pictures</string>
+    <string name="more">&gt;</string>
+    <string name="less">&lt;</string>
+
 
     <string name="start_hint">Enter username</string>
     <string name="start_username_hint">Type here…</string>

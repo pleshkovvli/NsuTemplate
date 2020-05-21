@@ -1,12 +1,11 @@
 package ru.nsu.template;
 
 import android.app.Application;
-import android.content.Context;
 
-public class TemplateApplication extends Application {
-    public static TemplateApplication application;
+public class PicsumPictures extends Application {
+    public static PicsumPictures application;
 
-    public static TemplateApplication getInstance() {
+    public static PicsumPictures getInstance() {
         return application;
     }
 
