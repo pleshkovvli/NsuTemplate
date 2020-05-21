@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".presentation.start.picsum.StartPicsumActivity">
+
+    <FrameLayout
+        android:id="@+id/empty"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/picsumImagesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_hint_picsum"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/empty" />
+
+    <Button
+        android:id="@+id/decreaseHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/less"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toTopOf="@id/decreaseWidth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/height"
+        app:layout_constraintTop_toBottomOf="@id/picsumImagesTitle" />
+
+    <TextView
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/offset_8dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toTopOf="@id/width"
+        app:layout_constraintLeft_toRightOf="@id/decreaseHeight"
+        app:layout_constraintRight_toRightOf="@id/increaseHeight"
+        app:layout_constraintTop_toBottomOf="@id/picsumImagesTitle" />
+
+    <Button
+        android:id="@+id/increaseHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/more"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toTopOf="@id/increaseWidth"
+        app:layout_constraintLeft_toRightOf="@id/height"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/picsumImagesTitle" />
+
+    <Button
+        android:id="@+id/decreaseWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/less"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toTopOf="@id/showItems"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/width"
+        app:layout_constraintTop_toBottomOf="@id/decreaseHeight" />
+
+    <TextView
+        android:id="@+id/width"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/offset_8dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toTopOf="@id/showItems"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height" />
+
+
+    <Button
+        android:id="@+id/increaseWidth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/more"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toTopOf="@id/showItems"
+        app:layout_constraintLeft_toRightOf="@id/width"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/increaseHeight" />
+
+
+    <Button
+        android:id="@+id/showItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/offset_16dp"
+        android:text="@string/show_pictures"
+        android:textSize="@dimen/common_text_size"
+        app:layout_constraintBottom_toTopOf="@id/empty_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/width" />
+
+    <FrameLayout
+        android:id="@+id/empty_bottom"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
